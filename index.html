@@ -3,16 +3,23 @@
         <title>URL Shortener</title>
     </head>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <script>
+        function callShort(){
+            let url = document.getElementById("long-url").value;
+            shortIt(url);
+        }
+    </script>
     <body>
         <div class="url-heading">
             URL Shortener!!!<br>
         </div>
         <div class="url-input">
-            <input type="text" name="long-url-text" placeholder="Enter Long URL" id="">
+            <input class="input-box" type="text" name="long-url-text" placeholder="Enter Long URL" id="long-url">
             <br>    
         </div>
         <div class="short-button"> 
-            <input type="button" value="Short It!">
+            <input class="clickable-button" type="button" value="SHORT IT" onclick="callShort()">
         </div>
     </body>
 </html>
